@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:wght@300;400;500;600;700&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,500&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
+body {
+    background-color: #F6F4EB;
+    font-family: system-ui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* header product */
+header {
+    background-color: #698474;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+
+}
+
+.logo img {
+    color: #fff;
+    max-width: 120px;
+    height: auto;
+}
+
+/* ------------------------navbar----------------- */
+.navmenu {
+    display: flex;
+}
+
+.shopping img {
+    width: 30px;
+}
+
+.navmenu li {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.navmenu a {
+    color: #000;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.navmenu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    background-color: #212121;
+    left: 0;
+    transition: all .22s;
+}
+a:hover{
+    border-bottom: 1.9px solid black;
+}
+#menu-icon {
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+    overflow: hidden;
+}
+/* unukk container keranjang */
+.container {
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.container-1 {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 100px;
+}
+
+.container-1 h1{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-icon .material-symbols-outlined {
+    position: relative;
+    text-align: right;
+}
+
+.nav-icon span {
+    width: 5px;
+
+}
+
+.quantity {
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 90%;
+    padding: 3px 10px;
+}
+
+/* untuk list tempat produknya */
+.list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    row-gap: 38px; 
+     margin-top: 50px;
+}
+
+.list .item {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 20px 20px #857d7d;
+    letter-spacing: 1px;
+}
+
+.list .item img {
+    width: 90%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.list .item .title {
+    font-weight: 600;
+}
+
+.list .item .price {
+    margin: 10px;
+}
+
+.list .item button {
+    background-color: #1C1F25;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+
+.list .item button:hover {
+    background: #698474;
+    color: #000;
+    font-weight: 300;
+}
+
+.card {
+    position: fixed;
+    top: 11%;
+    left: 100%;
+    width: 500px;
+    background-color: #191b20;
+    height: 80vh;
+    transition: 0.5s;
+}
+
+.active .card {
+    left: calc(100% - 500px);
+}
+
+.active .container {
+    transform: translateX(-200px);
+}
+
+.card h1 {
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.card .checkOut div {
+    background-color: #698474;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card .checkOut div:nth-child(2) {
+    background-color: #F6F4EB;
+    color: #000;
+}
+
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    width: 100%;
+}
+
+.listCard li button {
+    background-color: #fff5;
+    border: none;
+}
+
+.listCard .count {
+    margin: 0 10px;
+}
+
+/* untuk  footer */
+.end-text {
+    margin: 50px;
+    background-color: #698474;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+@media(max-width:890px){
+    header{
+        padding: 20px 3%;
+        transition: .4s;
+    }
+}
+
+
+@media(max-width:750px){
+
+    #menu-icon{
+        display: block;
+    }
+
+    .navmenu{
+        position: fixed;
+        top: 0;
+        right:-111%;
+        width: 300px;
+        height: 130vh;
+        background: #959a95;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 30px;
+        transition: all .42s;
+        z-index: 20;
+    }
+    .navmenu a{
+        display: block;
+        margin: 18px 0;
+        transition: all .42s;
+
+    }
+    .navmenu a:hover{
+        transform: translateY(-5px);
+    }
+
+    .navmenu.open{
+        left: 0;
+    }
+}
+
+ @media(max-width:900px) {
+    .quantity{
+        left: 89%;
+    }
+    .container{
+        width: 100%;
+    }
+    .container-1 {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+      .list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .list .item {
+        width: 47%;
+    }
+}
+@media(max-width:780px) {
+    .quantity{
+        left: 96%;
+        padding: 3px 10px;
+    }
+}
+
+
+@media(max-width:550px) {
+    .quantity{
+        left: 96%;
+    }
+     .container{
+        width: 100%;
+    } 
+     .container-1 {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    } 
+
+    .list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    } 
+    .list .item {
+        width: 97%;
+    }
+} 
+@media(max-width:320px) {
+    header{
+        padding: 10px 3%;
+    }
+    .shopping img {
+        margin-right: 30px;
+        }
+    .quantity{
+        left: 86%;
+    }
+
+}
+
+@media(max-width:280px) {
+    header{
+        padding: 10px 3%;
+    }
+    .shopping img {
+    margin-right: 30px;
+    }
+    
+    .quantity{
+        left: 83%;
+    }
+     .container{
+        width: 100%;
+    } 
+     .container-1 {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    } 
+
+    .list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    .list .item {
+        width: 97%;
+    }
+   
+}

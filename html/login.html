@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login&sigup</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <section class="wrapper">
+        <div class="form signup">
+            <header>sigup</header>
+            <form id="signupForm">
+                <input type="text" placeholder="masukkan nama" id="name">
+                <input type="email" placeholder="email address" id="email">
+                <input type="password" placeholder="password" id="password">
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label for="sigup" id="savePassword">simpan kata sandi</label>
+                </div>
+                <input type="submit" value="SIGN IN">
+            </form>
+        </div>
+        <div class="form login">
+            <header>Login</header>
+            <form id="loginForm">
+                <input type="email" placeholder="email address" id="loginEmail">
+                <input type="password" placeholder="password" id="loginPassword">
+                <a href="#">Forgot password?</a>
+                <input type="submit" value="login">
+            </form>
+        </div>
+    </section>
+    <script src="../javascript/login.js"></script>
+</body>
+</html>
